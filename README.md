@@ -19,7 +19,7 @@
         
     - embedding visualization : 
         - TSNE 사용, 아래는 TSNE 를 통한 최종 medicine vector 의 시각화 플롯
-        <img src="img/med2vec.png" alt="drawing" width="700">
+        <img src="img/med2vec.png" alt="drawing" width="400">
 
     - clustering algorithm : 
         - deterministic 한 결과를 추출해내고, cosine similarity 를 distance metric 으로 사용하기 위해,
