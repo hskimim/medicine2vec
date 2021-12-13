@@ -2,8 +2,12 @@
 
 일반의약품 데이터를 크롤링 및 분석하여, 의약품의 특징들에 대해 리서치하는 곳입니다.
 
-- crawling : 의약품에 대한 공공데이터 포털의 api 를 사용하였습니다.
+_________________
+
+- [crawling](https://github.com/hskimim/medicine2vec/blob/master/data%20crawl.ipynb) : 의약품에 대한 공공데이터 포털의 api 를 사용하였습니다.
 <img src="img/data_description.PNG" alt="drawing" width="700">
+
+_______________________
 
 - [project 1](https://github.com/hskimim/medicine2vec/blob/master/clustering.ipynb) : 
     - objective : 특정 의약품에 대한 vector 를 학습시키고, 클러스터링을 통해, 의약품 분류
@@ -28,4 +32,6 @@
     - Experiments & Test :
         - 학습시킨 embedding vector 가 의약품을 잘 분류하는지와 각각의 feature 를 잘 표현하는 지를 확인하기
         위해 2가지 실험을 설계하였음
-        - 자세한 내용은 첨부한 ipython notebook 참고 
+        - 자세한 내용은 첨부한 ipython notebook 참고
+        
+_______________________ 
