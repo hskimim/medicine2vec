@@ -14,9 +14,11 @@ _______________________
     
     - feature : 의약품의 성분(ingredient), 증상(symptom), 복용 시 주의 사항(caution)
     
+    - pre-processing : 모든 데이터가 string 자료형 및 한글이며, python regex 를 통해 전처리를 수행하였음  
     - model : 
         - ingredient/symptom : 같은 의약품에 표기되는 성분, 증상은 유사한 성질을 띄고 있다고 가정, 
-        augmentation 을 동반한 fasttext model 사용, fasttext 모델 사용 이유는, character level 로 유사한 성분과 증상의 특징에 기인함
+        augmentation 을 동반한 fasttext model 사용, fasttext 모델 사용 이유는, 
+        character level 로 유사한 성분과 증상의 특징에 기인함 (ex. 니코틴, 니코틴산아미드, 근육통, 근육피로)
         - caution : word embedding 이후, averaging 을 통해 문장 벡터 생성
         - concatenation + svd : 3 가지 feature vector 생성 후, concat + svd 를 통해 동일한 vector space 에 projection 하여, 
         redundancy 와 noise 를 줄였음
