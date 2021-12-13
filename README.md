@@ -5,7 +5,7 @@
 - crawling : 의약품에 대한 공공데이터 포털의 api 를 사용하였습니다.
 <img src="img/data_description.PNG" alt="drawing" width="700">
 
-- project 1 : 
+- [project 1](https://github.com/hskimim/medicine2vec/blob/master/clustering.ipynb) : 
     - objective : 특정 의약품에 대한 vector 를 학습시키고, 클러스터링을 통해, 의약품 분류
     
     - feature : 의약품의 성분(ingredient), 증상(symptom), 복용 시 주의 사항(caution)
@@ -19,7 +19,7 @@
         
     - embedding visualization : 
         - TSNE 사용, 아래는 TSNE 를 통한 최종 medicine vector 의 시각화 플롯
-        <img src="img/med2vec.PNG" alt="drawing" width="700">
+        <img src="img/med2vec.png" alt="drawing" width="700">
 
     - clustering algorithm : 
         - deterministic 한 결과를 추출해내고, cosine similarity 를 distance metric 으로 사용하기 위해,
