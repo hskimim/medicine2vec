@@ -37,3 +37,37 @@ _______________________
         - 자세한 내용은 첨부한 ipython notebook 참고
         
 _______________________ 
+
+- [project 2](https://github.com/hskimim/medicine2vec/blob/master/projection.ipynb) : 
+
+    - objective : project 1에서 학습시킨 feature vector 를 추가적인 모델링을 통해 향상시키며, 
+    동일한 objective 을 달성하려 함. 
+    
+    - feature : 
+        - 학습에 사용된 feature : 의약품의 성분(ingredient), 증상(symptom)
+        - 사용되지 않은 feature : 복용 시 주의 사항(caution) 
+            - feature embedding 이 잘 수행되었는지 performance measure 에 일종의 label 로 사용됨
+    
+    - pre-processing : 모든 데이터가 string 자료형 및 한글이며, python regex 를 통해 전처리를 수행하였음
+        
+    - model : 
+        - fasttext 를 통해 pretrain 한 ingredient/symptom vector 를 더 잘 학습시키기 위한 방법을 고안
+            - assumption : ingredient/symptom 은 분명한 관계가 존재하고, ("어떤 증상이 있을 때, 특정 성분이 있는 약을 먹는다") 이러한 관계를 embedding 에
+            잘 투영하는 것이 더 나은 표현을 만드는 것. 즉, {key : value} pair 를 잘 mapping 시키는 학습을 진행한다.
+            - logic : bi-lingual word embedding 학습 방법을 제안한 [논문](https://arxiv.org/pdf/1309.4168.pdf) 을 따라, ingredient vector $V_{ingre}$ 를 
+            symptom vector $V_{symp}$ 로 변환해주는 linear projection layer $W_{p}$ 를 학습하되, 우리가 원하는 것은 $W$ 가 아닌, $V$ 이므로,
+            학습 과정에서 $W$ 도 함께 업데이트 해준다. (논문에서는 $V$ 만 학습한다.)
+                   
+    - embedding visualization : 
+        - project 1 과 동일
+
+    - clustering algorithm : 
+        - project 1 과 동일
+        
+    - Experiments & Test :
+        - 학습시킨 embedding vector 가 의약품을 잘 분류하는지와 각각의 feature 를 잘 표현하는 지를 확인하기
+        위해 2가지 실험을 설계하였음
+        - 실험 결과에 따라, 현재 설계한 모델링이 가지는 한계점을 발견하였고 이에 개선된 모델링을 해당 project 의 sub-section 에 진행할 예정
+        - 자세한 내용은 첨부한 ipython notebook 참고
+        
+_______________________ 
