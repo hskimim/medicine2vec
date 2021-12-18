@@ -4,12 +4,24 @@
 
 _________________
 
-- [crawling](https://github.com/hskimim/medicine2vec/blob/master/data%20crawl.ipynb) : 의약품에 대한 공공데이터 포털의 api 를 사용하였습니다.
+- [crawling](https://github.com/hskimim/medicine2vec/blob/master/crawling/data%20crawl.ipynb) : 의약품에 대한 공공데이터 포털의 api 를 사용하였음.
 <img src="img/data_description.PNG" alt="drawing" width="700">
+
+- [labeling](https://github.com/hskimim/medicine2vec/blob/master/crawling/data%20crawl[label].ipynb) : 
+    - 의약품에 대한 분류 라벨은 2가지로 선정하였고, 이는 아래와 같다.
+        - 의약품 분류 코드 [[코드]](https://github.com/hskimim/medicine2vec/blob/master/labeling/cls_code_labeling.ipynb)
+         [[예제]](http://www.khmcpharm.com/Lib/Modules/MediSearch/popup_01.html)
+            - 사실상 ATC 분류 코드에 의존하며, 분류 코드를 crawling 해온 것으로, missing data 가 존재함.
+            <img src="img/cls_code_label_ex.PNG" alt="drawing" width="700">
+
+        - ATC 분류 코드  [[코드]](https://github.com/hskimim/medicine2vec/blob/master/labeling/atc_code_labeling.ipynb)
+        [[예제]](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=39954&logNo=50120700741)
+            - 총 5단계로 의약품을 계층적으로 분류하고 있으며, 이에 따라, 사전에 선택한 단계로 라벨링을 할 수 있음. (일종의 hyper-parameter)
+            <img src="img/atc_code_label_ex.PNG" alt="drawing" width="700">
 
 _______________________
 
-- [project 1](https://github.com/hskimim/medicine2vec/blob/master/clustering.ipynb) : 
+- [project 1](https://github.com/hskimim/medicine2vec/blob/master/project1/clustering.ipynb) : 
     - objective : 특정 의약품에 대한 vector 를 학습시키고, 클러스터링을 통해, 의약품 분류
     
     - feature : 의약품의 성분(ingredient), 증상(symptom), 복용 시 주의 사항(caution)
@@ -38,7 +50,7 @@ _______________________
         
 _______________________ 
 
-- [project 2](https://github.com/hskimim/medicine2vec/blob/master/projection.ipynb) : 
+- [project 2](https://github.com/hskimim/medicine2vec/blob/master/project2/projection.ipynb) : 
 
     - objective : project 1에서 학습시킨 feature vector 를 추가적인 모델링을 통해 향상시키며, 
     동일한 objective 을 달성하려 함. 
