@@ -12,12 +12,12 @@ _________________
         - 의약품 분류 코드 [[코드]](https://github.com/hskimim/medicine2vec/blob/master/labeling/cls_code_labeling.ipynb)
          [[예제]](http://www.khmcpharm.com/Lib/Modules/MediSearch/popup_01.html)
             - 사실상 ATC 분류 코드에 의존하며, 분류 코드를 crawling 해온 것으로, missing data 가 존재함.
-            <img src="img/cls_code_label_ex.PNG" alt="drawing" width="700">
+            <img src="img/cls_code_label_ex.PNG" alt="drawing" width="400">
 
         - ATC 분류 코드  [[코드]](https://github.com/hskimim/medicine2vec/blob/master/labeling/atc_code_labeling.ipynb)
         [[예제]](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=39954&logNo=50120700741)
             - 총 5단계로 의약품을 계층적으로 분류하고 있으며, 이에 따라, 사전에 선택한 단계로 라벨링을 할 수 있음. (일종의 hyper-parameter)
-            <img src="img/atc_code_label_ex.PNG" alt="drawing" width="700">
+            <img src="img/atc_code_label_ex.PNG" alt="drawing" width="400">
 
 _______________________
 
